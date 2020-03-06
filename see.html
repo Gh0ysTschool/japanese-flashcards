@@ -1,0 +1,12 @@
+<meta charset="utf-8"/>
+<html>
+    <body>
+
+    </body>
+<script src="./vocab_parse.js">
+    function trim_tag(word,tag){
+        return word.replace("</"+tag+">","").replace("<"+tag+">","");
+    }
+    vocab.split("<word>").forEach( (word) => word.replace("</word>"));
+</script>
+</html>
