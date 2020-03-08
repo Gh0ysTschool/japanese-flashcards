@@ -119,8 +119,7 @@
 <word> 年 (toshi) : year, age</word>
 <word> 重い (omoi) : heavy</word>
 <word> 胸 (mune) : chest, breast</word>
-<word> 払う (harau) : pay (money, respect, attention, etc</word>
-<word>)</word>
+<word> 払う (harau) : pay (money, respect, attention, etc)</word>
 <word> 軽い (karui) : light (of weight)</word>
 <word> 見つける (mitsukeru) : find</word>
 <word> 忘れる (wasureru) : forget, leave behind</word>
@@ -181,9 +180,7 @@
 <word> いる (iru) : be present, stay</word>
 <word> 木 (ki) : tree, wood</word>
 <word> 開ける (akeru) : open, unlock (doors, windows, etc</word>
-<word>)</word>
 <word> 閉める (shimeru) : shut, close (doors, windows, etc</word>
-<word>)</word>
 <word> 続く (tsuzuku) : continue, follow</word>
 <word> お医者さん (oishasan) : doctor (polite)</word>
 <word> 円 (en) : Japanese yen</word>
@@ -201,7 +198,6 @@
 <word> 話す (hanasu) : speak, talk</word>
 <word> 少し (sukoshi) : a bit, a little while</word>
 <word> 閉じる (tojiru) : shut, close (books, eyes, etc</word>
-<word>)</word>
 <word> 時 (toki) : time, moment</word>
 <word> 米 (kome) : rice (grain)</word>
 <word> 切る (kiru) : cut</word>
@@ -265,7 +261,6 @@
 <word> カタカナ (katakana) : katakana</word>
 <word> 今週 (konshyu) : this week</word>
 <word> 開く (hiraku) : open (books, eyes, etc</word>
-<word>)</word>
 <word> 水 (mizu) : water</word>
 <word> あれ (are) : that (over there)</word>
 <word> 二 (nichi) : two</word>
@@ -552,7 +547,6 @@
 <word> 橋 (hashi) : bridge</word>
 <word> 止まる (tomaru) : come to a stop, cease</word>
 <word> 降る (furu) : fall, come down (rain, snow, etc</word>
-<word>)</word>
 <word> 本当 (hontou) : reality, genuine</word>
 <word> 町 (machi) : town, city</word>
 <word> お菓子 (okashi) : sweets, snacks</word>
@@ -776,7 +770,7 @@
 <word> 二人 (futari) : two persons</word>
 <word> 止む (yamu) : stop, cease</word>
 <word> 九 (kyuu) : nine</word>
-<word> 昼間 (hiruma) : </word>
+<word> 昼間 (hiruma) : daytime, during the day</word>
 <word> いつ頃 (itsugoro) : about when, about what time</word>
 <word> 字 (ji) : (individual) character, letter</word>
 <word> 七 (nana) : seven (Chinese origin)</word>

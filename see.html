@@ -1,12 +1,98 @@
 <meta charset="utf-8"/>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui/augmented.css">
+</head>
 <html>
-    <body>
-
+    <style>
+        div {
+            padding : 40px;
+            text-align : center;
+        }
+        div.card {
+            padding:40px;
+            margin : 5px;
+            width : 300px;
+            height : 120px;
+            border-radius: 15px;
+            --aug-border: 5px;
+            --aug-inset: 5px;
+            text-align: center;
+            --aug-border-bg: gold;
+            --aug-inset-bg: rgba(255, 217, 0, 0.39);
+            --aug-r-height: 100px; 
+            --aug-r-width: 10px;
+            --aug-l-height: 100px; 
+            --aug-l-width: 10px;
+        }
+        .japanese {
+            font-size : 40;
+        }
+        ..english {
+            font-size : 20;
+        }
+    </style>
+    <body style="background-color: purple;">
+        <div style=" display:flex; flex-direction: row; ">
+            <div id="flex1" style=" flex : 1">
+                
+            </div>
+            <div id="flex0" style=" flex : 1">
+                
+            </div>
+        </div>
+        
     </body>
-<script src="./vocab_parse.js">
+<script src="./vocab_parse.js"></script>
+<script>
     function trim_tag(word,tag){
         return word.replace("</"+tag+">","").replace("<"+tag+">","");
+    };
+    function construct_card(id_index){
+        let card = document.createElement("div");
+        card.classList.add("card");
+        card.setAttribute("augmented-ui","tl-clip r-clip-y l-clip-y br-clip exe");
+        card.setAttribute("onclick","next_word("+id_index+")");
+        card.setAttribute("id","card"+id_index);
+        return card;
     }
-    vocab.split("<word>").forEach( (word) => word.replace("</word>"));
+    function next_word(card_index){
+        let phrase = words[Math.floor(Math.random() * (words.length-1))].trim();
+        let kanji_index = phrase.indexOf(" ");
+        let card = document.querySelector("#card"+card_index);
+
+        card.setAttribute( "oncontextmenu",
+            "reveal_answer('"
+            +phrase.substring(phrase.indexOf(' '))
+            +"','"
+            +"card"
+            +card_index
+            +"')"
+        );
+        
+        card.classList.add("japanese");
+        card.classList.remove("english");
+        card.innerHTML = phrase.split(' ')[0];
+    }
+    function reveal_answer(answer,card_index){
+        let card = document.querySelector("#"+card_index);
+        card.classList.remove("japanese");
+        card.classList.add("english");
+        card.innerHTML = answer;
+    }
+
+    let words = vocab.split("<word>");
+    words.forEach( (word, n) => words[n] = word.replace("</word>","") );
+    document.querySelector("#flex0").appendChild(construct_card(0));
+    document.querySelector("#flex0").appendChild(construct_card(1));
+    document.querySelector("#flex0").appendChild(construct_card(2));
+    document.querySelector("#flex1").appendChild(construct_card(3));
+    document.querySelector("#flex1").appendChild(construct_card(4));
+    document.querySelector("#flex1").appendChild(construct_card(5));
+    next_word(0);
+    next_word(1);
+    next_word(2);
+    next_word(3);
+    next_word(4);
+    next_word(5);
 </script>
 </html>
