@@ -1,5 +1,5 @@
-let vocab = 
- "<word> 多い (ooi) (おおい): a lot of, many</word>"
++"<word>+"<word>NaN"
++"<word> 多い (ooi) (おおい): a lot of, many</word>"
 +"<word> 家 (ie) (いえ): home, household</word>"
 +"<word> これ (kore) (これ): this, this one</word>"
 +"<word> それ (sore) (それ): that, that one</word>"
@@ -994,4 +994,5 @@ let vocab =
 +"<word> 熱 (netsu) (ねつ): heat, fever</word>"
 +"<word> ページ (pe-ji) (ぺ-じ): page</word>"
 +"<word> 踊る (odoru) (おどる): dance</word>"
-+"<word> 長さ (nagasa) (ながさ): length</word>";
++"<word> 長さ (nagasa) (ながさ): length</word>"
+"
