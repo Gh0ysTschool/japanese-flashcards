@@ -23,12 +23,33 @@
             --aug-r-width: 10px;
             --aug-l-height: 100px; 
             --aug-l-width: 10px;
+            flex-grow: 3;
         }
         .japanese {
             font-size : 40;
         }
         .english {
             font-size : 20;
+        }
+        .container {
+            display : flex;
+            flex-direction : row ;
+        }
+        button.reveal {
+            border-radius: 2px;
+            --aug-border: 2px;
+            --aug-inset: 3px;
+            min-width: 2rem;
+            text-align: center;
+            --aug-border-bg: gold;
+            --aug-inset-bg: rgba(255, 217, 0, 0.39);
+            --aug-l-height: 20px; 
+            --aug-l-width: 2px;
+            --aug-r-height: 50px; 
+            --aug-r-width: 4px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            background-color:transparent;
         }
     </style>
     <body style="background-color: purple;">
@@ -53,14 +74,28 @@
         card.setAttribute("augmented-ui","tl-clip r-clip-y l-clip-y br-clip exe");
         card.setAttribute("onclick","next_word("+id_index+")");
         card.setAttribute("id","card"+id_index);
-        return card;
+
+        
+        let container = document.createElement("div");
+        container.setAttribute('id','container'+id_index);
+        container.classList.add("container");
+
+        let button = document.createElement("button");
+        button.innerHTML = "R E V E A L".split("").join("<br/>");
+        button.setAttribute('id','button'+id_index);
+        button.setAttribute("augmented-ui","r-clip-y l-clip-y br-clip exe");
+
+        container.appendChild(card);
+        container.appendChild(button);
+        button.classList.add("reveal");
+        return container;
     }
     function next_word(card_index){
         let phrase = words[Math.floor(Math.random() * (words.length-1))].trim();
         let kanji_index = phrase.indexOf(" ");
         let card = document.querySelector("#card"+card_index);
-
-        card.setAttribute( "oncontextmenu",
+        let button = document.querySelector("#button"+card_index);
+        button.setAttribute( "onclick",
             "reveal_answer('"
             +phrase.substring(phrase.indexOf(' '))
             +"','"
